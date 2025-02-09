@@ -8,6 +8,9 @@ import os
 
 
 
+#  INCLUIR LA LECTURA DE MAILSSSSSSS
+
+
 
 #  Configuración y envío del mail 
 def Conexion(user, password, mensaje):
@@ -57,4 +60,6 @@ def Envio_mail_adjunto(user, password, asunto, mensaje, destinatario, archivo_ad
 
 
 if __name__ == '__main__':
-    pass
+    from Herramientas.variables import USUARIO, PASSWORD, DESTINATARIO
+    
+    Envio_mail(USUARIO, PASSWORD , "ASUNTO: Prueba", "\n Mensaje", DESTINATARIO)

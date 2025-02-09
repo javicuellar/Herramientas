@@ -3,13 +3,15 @@ from dotenv import load_dotenv
 
 
 
-class Variables():
-    def __init__(self) -> None:
-        if os.name == 'nt':
-            load_dotenv('\\Python\\config.env')
-        else:
-            load_dotenv('./config.env')
+if os.name == 'nt':
+    load_dotenv('\\Python\\config.env')
+else:
+    load_dotenv('./config.env')
 
-        self.usuario = os.getenv("USER_MAIL")
-        self.password = os.getenv("PASSWORD_MAIL")
-        self.destinatario = os.getenv("DESTINATARIO_MAIL")
+USUARIO = os.getenv("USER_MAIL")
+PASSWORD = os.getenv("PASSWORD_MAIL")
+DESTINATARIO = os.getenv("DESTINATARIO_MAIL")
+SECRET_KEY = os.getenv("SECRET_KEY")
+SQLALCHEMY_DATABASE_URI = os.getenv("SQLALCHEMY_DATABASE_URI")
+USUARIO_JAVI = os.getenv("USER_JAVI")
+PASSWORD_JAVI = os.getenv("PASSWORD_JAVI")
