@@ -10,7 +10,7 @@ alcance =  ['https://www.googleapis.com/auth/spreadsheets',
 if os.name == 'nt':
     Credenciales = ServiceAccountCredentials.from_json_keyfile_name('\\Python\\Credenciales.json', alcance)
 else:
-    Credenciales = ServiceAccountCredentials.from_json_keyfile_name('./Credenciales.json', alcance)
+    Credenciales = ServiceAccountCredentials.from_json_keyfile_name('/usr/config/Credenciales.json', alcance)
 
 cliente = gspread.authorize(Credenciales)
 
